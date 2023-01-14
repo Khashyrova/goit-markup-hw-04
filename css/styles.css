@@ -15,6 +15,7 @@
   --border-customers-color: #AFB1B8;
   --section-background-color: #f5f5f5;
   --background-footer-icons:rgba(255, 255, 255, 0.1);
+  --bgd-hero:rgba(47, 48, 58, 0.4), rgba(47, 48, 58, 0.4);
 }
 header{
   border-bottom: 1px solid var(--border-header-color);
@@ -70,9 +71,10 @@ ul {
 .item + .item{
   margin-left: 50px;
 }
-.item{display: flex;
-  align-items: center;}
-
+.item{
+  display: flex;
+  align-items: center;
+}
 .link {
   color: var(--title-text-color);
   line-height: 1.1;
@@ -97,14 +99,12 @@ ul {
   color: var(--contacts-color);
   line-height: 1.1;
 }
-.icon-letter{
-margin-right: 10px;
-fill: var(--contacts-color);
-cursor: pointer;
-width:16px;
- height:12px;
+.icon-contacts{
+  margin-right: 10px;
 }
-
+.item-container{
+fill: var(--contacts-color);
+}
 .mail:hover,
 .mail:focus {
   color: var(--accent-color);
@@ -123,14 +123,14 @@ width:16px;
 
 .hero {
  background-color: var(--background-hero-main);
-  background-image: linear-gradient(to right,
-  rgba(47, 48, 58, 0.4),
-  rgba(47, 48, 58, 0.4)), 
+  background-image: linear-gradient( var(--bgd-hero) ), 
   url(../images/Img-hero.jpg);
   margin-left: auto;
   margin-right: auto;
   max-width: 1600px;
-  height: 600px;
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
   text-align: center;
   padding-top: 200px;
   padding-bottom: 200px;
@@ -170,19 +170,21 @@ width:16px;
 .principles-list{
   display: flex;
 }
-.icon-principles{
-  width: 270px;
-  height: 120px;
-  padding: 25px;
-  border-radius: 4px;
-  margin-bottom: 30px;
-  background-color: var(--buttons-portfolio-color);
+.principles-item{
+  margin-right: 30px;
 }
 .principles-item:nth-child(4n){
   margin-right: 0;
 }
-.principles-item{
-  margin-right: 30px;
+.icon-principles-container{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 270px;
+  height: 120px;
+  border-radius: 4px;
+  margin-bottom: 30px;
+  background-color: var(--buttons-portfolio-color);
 }
 .principles-title {
   margin-top: 0;
@@ -198,7 +200,6 @@ width:16px;
   margin: 0;
 }
 .list-img{
-  
   display: flex;
   margin-bottom: 0;
 }
@@ -264,25 +265,30 @@ padding-bottom: 94px;
 }
 .team-member-profesion{
   margin-top: 0;
-  margin-bottom: 0;
+  margin-bottom: 16px;
   line-height: 1.4;
   color: var(--tel-number-color);
 }
 .network{
   fill: var(--color-icons);
-  border-radius: 50%;
-  transition: fill 250ms cubic-bezier(0.4, 0, 0.2, 1);
-
+  
 }
-.network:hover,
-.network:focus{
+.network:hover, .network-link:hover,
+.network:focus, .network-link:focus{
   fill: var(--secondary-text-color);
   background-color: var(--accent-color);
+  border-radius: 50%;
 }
+.network-link{
+ display: flex;
+ justify-content: center;
+ align-items: center; 
+}
+
 .social-networks{
   display: flex;
- padding: 16px 32px 30px;
-   gap: 10px;
+  padding: 0 32px 30px;
+  gap: 10px;
 }
 .customers-list{
   display: flex;
@@ -291,22 +297,17 @@ padding-bottom: 94px;
 .customers{
   padding-top: 94px;
   padding-bottom: 94px;
-  background-color: var(--section-background-color);
 }
 .customers-item{
- fill: var(--color-icons);
- padding: 16px 32px;
-}
-
-.customers-list-item{
+  display: flex;
+  justify-content: center;
+  align-items: center;
   width: 170px;
   height: 92px;
   border: 1px solid var(--border-customers-color);
   border-radius: 4px;
-  
+  fill: var(--color-icons);
 }
- .customers-list-item:hover,
- .customers-list-item:focus,
  .customers-item:hover,
  .customers-item:focus {
   fill: var(--accent-color);
@@ -330,6 +331,7 @@ padding-bottom: 94px;
 }
 .footer-container{
   display: flex;
+  align-items: baseline;
 }
 .footer-container-addres{
   display: block;
@@ -380,12 +382,15 @@ padding-bottom: 94px;
   display: flex;
   gap: 10px;
 }
-.foter-icon{
-  fill: var(--background-footer-icons);
+.foter-link{
+  
+  justify-content: center;
+  align-items: center;
+fill: var(--background-footer-icons);
   border-radius: 50%;
 }
-.foter-icon:hover,
-.foter-icon:focus{
+.foter-link:hover,
+.foter-link:focus{
   fill: var(--accent-color);
 }
 /* стилі Портфоліо */
