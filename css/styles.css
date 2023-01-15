@@ -100,15 +100,13 @@ ul {
   line-height: 1.1;
 }
 .icon-contacts{
+  fill: currentColor;
   margin-right: 10px;
 }
-.item-container{
-fill: var(--contacts-color);
-}
+
 .mail:hover,
 .mail:focus {
   color: var(--accent-color);
-  fill: var(--accent-color);
 }
 .tel {
   color: var(--contacts-color);
@@ -270,19 +268,22 @@ padding-bottom: 94px;
   color: var(--tel-number-color);
 }
 .network{
-  fill: var(--color-icons);
+  fill:currentColor;
+}
+.network-link:hover,
+.network-link:focus{
+  color: var(--secondary-text-color);
+  background-color: var(--accent-color);
   
 }
-.network:hover, .network-link:hover,
-.network:focus, .network-link:focus{
-  fill: var(--secondary-text-color);
-  background-color: var(--accent-color);
-  border-radius: 50%;
-}
 .network-link{
- display: flex;
- justify-content: center;
- align-items: center; 
+  color: var(--color-icons);
+  width: 44px;
+  height: 44px;
+  border-radius: 50%;
+  display: flex;
+  justify-content: center;
+  align-items: center; 
 }
 
 .social-networks{
@@ -298,6 +299,9 @@ padding-bottom: 94px;
   padding-top: 94px;
   padding-bottom: 94px;
 }
+.customers-icon{
+  fill: currentColor;
+}
 .customers-item{
   display: flex;
   justify-content: center;
@@ -306,11 +310,11 @@ padding-bottom: 94px;
   height: 92px;
   border: 1px solid var(--border-customers-color);
   border-radius: 4px;
-  fill: var(--color-icons);
+  color: var(--color-icons);
 }
  .customers-item:hover,
  .customers-item:focus {
-  fill: var(--accent-color);
+  color: var(--accent-color);
   border-color: var(--accent-color);
  }
 .customers-title{
@@ -382,16 +386,22 @@ padding-bottom: 94px;
   display: flex;
   gap: 10px;
 }
+.foter-icon{
+  fill: currentColor;
+}
 .foter-link{
-  
-  justify-content: center;
-  align-items: center;
-fill: var(--background-footer-icons);
+  width: 44px;
+  height: 44px;
   border-radius: 50%;
+  display: flex;
+  justify-content: center;
+  align-items: center; 
+  color: var(--secondary-text-color);
+  background-color: var(--background-footer-icons);
 }
 .foter-link:hover,
 .foter-link:focus{
-  fill: var(--accent-color);
+  background-color: var(--accent-color);
 }
 /* стилі Портфоліо */
 .section-progects {
